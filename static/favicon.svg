@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="#d4a017" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M9 15 L39 15 L34 33 L14 33 Z"/>
+  <path d="M39 15 L45 9"/>
+  <line x1="17" y1="33" x2="17" y2="36"/>
+  <line x1="31" y1="33" x2="31" y2="36"/>
+  <circle cx="17" cy="39" r="2.6" fill="#d4a017" stroke="none"/>
+  <circle cx="31" cy="39" r="2.6" fill="#d4a017" stroke="none"/>
+  <text x="24" y="28" font-family="ui-monospace, monospace" font-size="14" font-weight="800" text-anchor="middle" fill="#d4a017" stroke="none" letter-spacing="-1.5">{ }</text>
+</svg>
