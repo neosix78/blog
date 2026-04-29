@@ -1,0 +1,81 @@
+baseURL = "https://frankscavone.pages.dev/"
+languageCode = "it-it"
+title = "Frank Scavone"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+pagination.pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+[params]
+  env = "production"
+  title = "Frank Scavone"
+  description = "AI agents e automazioni in un negozio vero. Note tecniche dal banco di Prezzismart."
+  keywords = ["AI", "automazione", "Odoo", "n8n", "Claude Code", "Docker", "retail"]
+  author = "Frank Scavone"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowToc = true
+  TocOpen = false
+  comments = false
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  hidemeta = false
+  hideSummary = false
+
+  [params.homeInfoParams]
+    Title = "Ciao, sono Frank."
+    Content = """
+Costruisco agenti AI e automazioni in un negozio vero — Prezzismart, Mazara del Vallo.
+
+Qui scrivo di **Odoo, n8n, Claude Code, Docker** e dello stack che fa girare la baracca. Niente teoria da consulente: solo cose che ho messo in produzione, con quello che ha funzionato e quello che ho dovuto rifare.
+"""
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/frankscavone"
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/neosix78"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[[menu.main]]
+  identifier = "posts"
+  name = "Post"
+  url = "/posts/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tag"
+  url = "/tags/"
+  weight = 20
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 30
+
+[markup]
+  [markup.highlight]
+    style = "github-dark"
+    lineNos = false
+    codeFences = true
+    guessSyntax = true
+  [markup.goldmark.renderer]
+    unsafe = true
