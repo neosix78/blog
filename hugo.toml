@@ -35,6 +35,11 @@ pagination.pagerSize = 10
   hidemeta = false
   hideSummary = false
 
+  [params.label]
+    text = "frank.scavone"
+    icon = "/logo.svg"
+    iconHeight = 26
+
   [params.homeInfoParams]
     Title = "Ciao, sono Frank."
     Content = """

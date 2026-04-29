@@ -1,0 +1,202 @@
+/* Frank Scavone — palette scontrino mediterraneo */
+
+:root {
+  --theme: #faf6ee;
+  --entry: #faf6ee;
+  --primary: #1a1815;
+  --secondary: #5a544a;
+  --tertiary: #d8d0bf;
+  --content: #2a2620;
+  --border: #d8cfba;
+  --code-block-bg: #1a1815;
+  --code-bg: #f0e7d3;
+  --hljs-bg: #1a1815;
+  --accent: #d4a017;
+  --accent-hot: #e0644f;
+}
+
+.dark {
+  --theme: #1a1815;
+  --entry: #1a1815;
+  --primary: #f0e7d3;
+  --secondary: #b8af9d;
+  --tertiary: #3a342c;
+  --content: #e8dfca;
+  --border: #3a342c;
+  --code-block-bg: #0d0c0a;
+  --code-bg: #2a2620;
+  --hljs-bg: #0d0c0a;
+}
+
+html, body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+code, kbd, pre, samp,
+.post-meta, .entry-footer, time, .post-date,
+.archive-year, .archive-month, .archive-count {
+  font-family: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+/* Wordmark + logo */
+.logo a {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 1.05rem;
+}
+.logo a img,
+.logo a svg {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Logo: usa CSS mask per ereditare il colore del tema invece del nero fisso dell'SVG */
+.logo a img {
+  width: 28px;
+  height: 28px;
+  background-color: var(--primary);
+  -webkit-mask: url(/logo.svg) center/contain no-repeat;
+  mask: url(/logo.svg) center/contain no-repeat;
+  /* nasconde i pixel originali dell'img, mostra solo la maschera colorata */
+  visibility: visible;
+}
+.logo a img:not([src]) { display: none; }
+.logo a:hover img {
+  background-color: var(--accent-hot);
+}
+
+/* Header bar */
+.header {
+  border-bottom: 2px dotted var(--border);
+}
+.nav .menu a {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.85rem;
+  text-transform: lowercase;
+}
+
+/* Headings */
+.post-title,
+.home-info .entry-header,
+.archive-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.post-content h2,
+.post-content h3 {
+  letter-spacing: -0.01em;
+}
+
+/* Accent: link underline gold */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  background-image: linear-gradient(transparent calc(100% - 2px), var(--accent) 2px);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: color 0.15s ease, background-image 0.15s ease;
+}
+a:hover {
+  color: var(--accent-hot);
+}
+.nav a, .logo a, .footer a {
+  background-image: none;
+}
+.nav a:hover, .footer a:hover {
+  color: var(--accent-hot);
+}
+
+/* Post entries — stile registro/scontrino */
+.post-entry {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px dotted var(--border) !important;
+  border-radius: 0 !important;
+  padding: 1.4rem 0 !important;
+  margin-bottom: 0 !important;
+  box-shadow: none !important;
+}
+.post-entry:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+.post-entry .entry-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+.post-entry .entry-content {
+  margin: 0.4rem 0;
+  color: var(--secondary);
+}
+.post-entry .entry-footer {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+}
+
+/* HR a puntini */
+hr,
+.post-content hr {
+  border: none;
+  border-top: 2px dotted var(--border);
+  margin: 2.2rem 0;
+}
+
+/* Code */
+.post-content code {
+  background: var(--code-bg);
+  border-radius: 2px;
+  padding: 0.1em 0.35em;
+  font-size: 0.92em;
+}
+.post-content pre {
+  border-radius: 4px;
+  border: 1px solid var(--tertiary);
+}
+
+/* Footer */
+.footer {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.78rem;
+  color: var(--secondary);
+  border-top: 2px dotted var(--border);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent);
+  color: #1a1815;
+}
+
+/* Home info */
+.home-info .entry-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Archive page receipt vibe */
+.archive-entry {
+  border-bottom: 1px dotted var(--border);
+}
+
+/* Tags / breadcrumbs */
+.post-tags li a,
+.terms-tags a {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.78rem;
+  text-transform: lowercase;
+  border: 1px dotted var(--border);
+  background: transparent;
+  border-radius: 2px;
+  background-image: none;
+}
+.post-tags li a:hover,
+.terms-tags a:hover {
+  border-color: var(--accent);
+  color: var(--accent-hot);
+}
