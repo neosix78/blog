@@ -1,6 +1,6 @@
 +++
 title = "Il mio PC non apriva Chrome (e la diagnosi mi ha lasciato a bocca aperta)"
-date = '2026-04-29T18:30:00+02:00'
+date = '2026-04-29T10:00:00+02:00'
 draft = false
 summary = "Popup minaccioso, browser bloccato, 23 processi zombie. Apro %LOCALAPPDATA%\\Chrome e trovo 12 GB di profilo. Cosa c'era dentro, e perché alla fine ha vinto il riavvio."
 tags = ["chrome", "manutenzione", "performance", "windows", "sysadmin"]
