@@ -1,6 +1,6 @@
 +++
 title = "21 cron job al buio (e cosa ho fatto per accendere la luce)"
-date = '2026-04-30T09:00:00+02:00'
+date = '2026-04-30T08:00:00+02:00'
 draft = false
 summary = "Ho 21 cron sul mio server. Per mesi non sapevo davvero quali girassero e quali no. Ho scritto un wrapper di 1.500 righe in Python — niente Prometheus, niente agent — e l'ho rilasciato open-source su GitHub."
 tags = ["python", "devops", "cron", "open-source", "automazione", "self-hosted"]
