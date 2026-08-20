@@ -3,7 +3,7 @@ title = "Da uno script per le spedizioni al cuore del negozio: storia del mio ge
 date = '2026-08-20T11:00:00+02:00'
 draft = false
 summary = "È iniziato tutto con 50 righe di Python per non impazzire tra le etichette delle Poste. Oggi PrezziSmartHub è un sistema operativo completo che fa dialogare cassa, banche, logistica, telecamere AI e magazzino. E ora si prepara a pensionare il vecchio gestionale per far posto a un motore cucito al 100% sulla nostra realtà."
-tags = ["self-hosting", "python", "flask", "docker", "danea", "automazione", "piccole-imprese", "prezzismart"]
+tags = ["self-hosting", "python", "flask", "docker", "danea", "automazione", "gestionale-su-misura", "piccole-imprese", "prezzismart", "retail-tech"]
 categories = ["tech-tips"]
 
 [cover]
@@ -39,8 +39,8 @@ Da quel piccolo script è partita una reazione a catena inarrestabile:
 
 * 📊 **I conti serali**: Ho costruito un modulo di contabilità interna per incrociare in automatico scontrini, fatture, contanti nel cassetto, carte su Banca Sella e versamenti su Fineco.
 * 📦 **La logistica unificata**: Ho integrato Paccofacile, Poste e GLS sotto un unico tetto, con calcolo automatico dei costi e tracking senza dover aprire dieci siti diversi.
-* 🏷️ **I margini delle promo**: Ho creato una cabina di regia per il volantino, per calcolare al centesimo i margini reali sui prodotti eroe prima di lanciarli.
-* 👁️ **L'affluenza reale**: Abbiamo persino collegato le telecamere del negozio con l'AI per capire quante persone entrano fisicamente rispetto a quanti scontrini battiamo.
+* 🏷️ **I margini delle promo**: Ho creato una cabina di regia per il volantino, per calcolare al centesimo i margini reali sui prodotti prima di lanciarli in offerta.
+* 👁️ **L'affluenza reale**: Abbiamo persino collegato le telecamere del negozio con l'AI (Frigate) per capire quante persone entrano fisicamente rispetto a quanti scontrini battiamo.
 
 Giorno dopo giorno, notte dopo notte, quel piccolo script è cresciuto fino a diventare **PrezziSmartHub**. 🧠
 
@@ -50,12 +50,12 @@ Giorno dopo giorno, notte dopo notte, quel piccolo script è cresciuto fino a di
 
 Ed eccoci al passo più importante, quello a cui sto lavorando proprio in questo periodo. 
 
-Per anni ho usato **Danea Easyfatt**. Un ottimo software commerciale standard, per carità, ma pur sempre un programma nato per il mondo desktop di vent'anni fa: rigido, chiuso nel suo database, pensato per una gestione generica e slegato dal web moderno. Per farlo parlare con la mia app Android del banco, con l'e-commerce o con gli scraper dei fornitori ho dovuto costruire ponti e sincronizzazioni continue. 🌉
+Per anni ho usato **Danea Easyfatt**. Un ottimo software commerciale standard, per carità, ma pur sempre un programma nato per il mondo desktop di vent'anni fa: rigido, chiuso nel suo database Firebird, pensato per una gestione generica e slegato dal web moderno. Per farlo dialogare con la nostra app Android del banco, con l'e-commerce (come ho raccontato quando [ho rifatto l'e-commerce in 48 ore](/posts/migrazione-prestashop-woocommerce-48h/)) o per sincronizzare il catalogo online (evitando i guai visti quando [il database ha deciso di andare in pensione con gli iPhone](/posts/iphone-sul-sito/)), ho dovuto costruire ponti e sincronizzazioni continue. 🌉
 
 A un certo punto mi sono fatto una domanda: *perché devo continuare ad adattare il mio modo di lavorare ai limiti di un software esterno, quando posso cucirmi addosso il MIO gestionale ideale?* ✂️🧵
 
 Così dentro l'Hub sta prendendo forma il nostro **nuovo modulo gestionale proprietario**. 
-Un sistema progettato millimetro per millimetro sulle esigenze reali del mio negozio:
+Un sistema progettato millimetro per millimetro sulle esigenze reali di [PrezziSmart](https://prezzismart.it):
 * Scansione istantanea dei codici a barre direttamente dallo smartphone o dal banco 📱🔍
 * Gestione nativa delle normative che toccano da vicino il nostro settore (Reverse Charge sulla telefonia, gestione schede RAEE per il ritiro dei grandi elettrodomestici) ♻️
 * Confronto immediato dei listini B2B tra i vari fornitori all'ingrosso per sapere sempre dove comprare al miglior prezzo netto 💰
@@ -70,7 +70,7 @@ A breve Danea andrà definitivamente in pensione, sostituito da un motore creato
 Se dovessi dire che l'Hub è un'opera finita e perfetta, mentirei. 
 PrezziSmartHub è un **cantiere perennemente aperto**. 
 
-Dietro la grafica pulita ci sono sfide tecniche continue: database da sincronizzare in sicurezza, container Docker da aggiornare, calibrazioni per non sovraccaricare il server e nuovi collegamenti all'intelligenza artificiale per automatizzare schede prodotto e risposte. 🤖
+Dietro la grafica pulita ci sono sfide tecniche continue: database da sincronizzare in sicurezza, container Docker da aggiornare, monitoraggio dei job in background (un po' come ho fatto per [i 21 cron job del server](/posts/cron-sentinel/)) e nuovi collegamenti all'intelligenza artificiale per automatizzare schede prodotto e risposte. 🤖
 
 A volte qualcosa si inceppa, apro i log, capisco dove sta il problema e lo sistemo. Ma la soddisfazione di vedere l'intero ecosistema del negozio muoversi in perfetta armonia — dal banco al magazzino, dal web alle banche — non ha prezzo. 📈
 

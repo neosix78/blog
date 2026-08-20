@@ -14,19 +14,24 @@ pagination.pagerSize = 10
   disableXML = true
   minifyOutput = true
 
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.8
+  filename = "sitemap.xml"
+
 [params]
   env = "production"
   title = "Frank Scavone"
-  description = "Pragmatic Systems Integrator & AI Automation Architect. Costruttore di soluzioni tecnologiche e automazioni in un negozio vero."
-  keywords = ["AI", "automazione", "Systems Integration", "Odoo", "n8n", "Claude Code", "Docker", "retail", "PrezziSmart"]
+  description = "Pragmatic Systems Integrator & AI Automation Architect. Costruttore di soluzioni tecnologiche e automazioni in un negozio vero — PrezziSmart, Mazara del Vallo."
+  keywords = ["AI", "automazione", "Systems Integration", "Odoo", "n8n", "Claude Code", "Docker", "retail", "PrezziSmart", "gestionale su misura", "Danea", "WooCommerce"]
   author = "Frank Scavone"
   defaultTheme = "auto"
   ShowReadingTime = true
-  ShowShareButtons = false
+  ShowShareButtons = true
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  ShowWordCount = false
+  ShowWordCount = true
   ShowToc = true
   TocOpen = false
   comments = false
@@ -34,6 +39,7 @@ pagination.pagerSize = 10
   disableScrollToTop = false
   hidemeta = false
   hideSummary = false
+  images = ["/logo.svg"]
 
   [params.label]
     text = "frank.scavone"
