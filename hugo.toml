@@ -1,5 +1,6 @@
 baseURL = "https://frankscavone.com/"
-languageCode = "it-it"
+locale = "it-IT"
+defaultContentLanguage = "it"
 title = "Frank Scavone"
 theme = "PaperMod"
 
@@ -22,7 +23,7 @@ pagination.pagerSize = 10
 [params]
   env = "production"
   title = "Frank Scavone"
-  description = "Pragmatic Systems Integrator & AI Automation Architect. Costruttore di soluzioni tecnologiche e automazioni in un negozio vero — PrezziSmart, Mazara del Vallo."
+  description = "Frank Scavone progetta agenti AI, integrazioni e automazioni messe alla prova ogni giorno nel negozio PrezziSmart di Mazara del Vallo."
   keywords = ["AI", "automazione", "Systems Integration", "Odoo", "n8n", "Claude Code", "Docker", "retail", "PrezziSmart", "gestionale su misura", "Danea", "WooCommerce"]
   author = "Frank Scavone"
   defaultTheme = "auto"
@@ -39,7 +40,14 @@ pagination.pagerSize = 10
   disableScrollToTop = false
   hidemeta = false
   hideSummary = false
-  images = ["/logo.svg"]
+  images = ["/posts/da-script-a-gestionale-prezzismarthub/cover.png"]
+
+  [params.schema]
+    publisherType = "Person"
+    sameAs = [
+      "https://www.linkedin.com/in/frankscavone",
+      "https://github.com/neosix78"
+    ]
 
   [params.label]
     text = "frank.scavone"

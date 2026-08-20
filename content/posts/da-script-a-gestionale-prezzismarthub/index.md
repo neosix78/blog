@@ -2,7 +2,7 @@
 title = "Da uno script per le spedizioni al cuore del negozio: storia del mio gestionale su misura"
 date = '2026-08-20T11:00:00+02:00'
 draft = false
-summary = "È iniziato tutto con 50 righe di Python per non impazzire tra le etichette delle Poste. Oggi PrezziSmartHub è un sistema operativo completo che fa dialogare cassa, banche, logistica, telecamere AI e magazzino. E ora si prepara a pensionare il vecchio gestionale per far posto a un motore cucito al 100% sulla nostra realtà."
+summary = "Da 50 righe di Python a un gestionale su misura: come PrezziSmartHub collega contabilità, logistica, magazzino e automazioni del negozio."
 tags = ["self-hosting", "python", "flask", "docker", "danea", "automazione", "gestionale-su-misura", "piccole-imprese", "prezzismart", "retail-tech"]
 categories = ["tech-tips"]
 
@@ -23,7 +23,7 @@ Un giorno mi sono detto: *basta, questo tempo devo riprendermelo*. 🛑
 
 ---
 
-### Com’è iniziato tutto: un semplice script 💡
+## Com’è iniziato tutto: un semplice script 💡
 
 PrezziSmartHub non è nato da un piano industriale disegnato a tavolino da consulenti in giacca e cravatta. È nato da un fastidio pratico, minuscolo: **non volevo più perdere un quarto d'ora per compilare tre etichette di spedizione.**
 
@@ -33,7 +33,7 @@ Solo che l'appetito vien mangiando. Quando vedi che il computer può toglierti d
 
 ---
 
-### La valanga: quando il codice incontra la realtà del bancone 🏪⚡
+## La valanga: quando il codice incontra la realtà del bancone 🏪⚡
 
 Da quel piccolo script è partita una reazione a catena inarrestabile:
 
@@ -46,7 +46,7 @@ Giorno dopo giorno, notte dopo notte, quel piccolo script è cresciuto fino a di
 
 ---
 
-### Il prossimo grande salto: addio a Danea, benvenuto Gestionale su misura 👋💼
+## Il prossimo grande salto: addio a Danea, benvenuto Gestionale su misura 👋💼
 
 Ed eccoci al passo più importante, quello a cui sto lavorando proprio in questo periodo. 
 
@@ -65,7 +65,7 @@ A breve Danea andrà definitivamente in pensione, sostituito da un motore creato
 
 ---
 
-### Un cantiere sempre aperto (ed è bellissimo così) 🏗️✨
+## Un cantiere sempre aperto (ed è bellissimo così) 🏗️✨
 
 Se dovessi dire che l'Hub è un'opera finita e perfetta, mentirei. 
 PrezziSmartHub è un **cantiere perennemente aperto**. 
