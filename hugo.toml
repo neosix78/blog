@@ -17,8 +17,8 @@ pagination.pagerSize = 10
 [params]
   env = "production"
   title = "Frank Scavone"
-  description = "AI agents e automazioni in un negozio vero. Note tecniche dal banco di Prezzismart."
-  keywords = ["AI", "automazione", "Odoo", "n8n", "Claude Code", "Docker", "retail"]
+  description = "Pragmatic Systems Integrator & AI Automation Architect. Costruttore di soluzioni tecnologiche e automazioni in un negozio vero."
+  keywords = ["AI", "automazione", "Systems Integration", "Odoo", "n8n", "Claude Code", "Docker", "retail", "PrezziSmart"]
   author = "Frank Scavone"
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -41,11 +41,14 @@ pagination.pagerSize = 10
     iconHeight = 26
 
   [params.homeInfoParams]
-    Title = "Ciao, sono Frank."
+    Title = "Frank Scavone"
     Content = """
-Costruisco agenti AI e automazioni in un negozio vero — Prezzismart, Mazara del Vallo.
+**Pragmatic Systems Integrator & AI Automation Architect**  
+*Costruttore di soluzioni tecnologiche.*
 
-Qui scrivo di **Odoo, n8n, Claude Code, Docker** e dello stack che fa girare la baracca. Niente teoria da consulente: solo cose che ho messo in produzione, con quello che ha funzionato e quello che ho dovuto rifare.
+Progetto e metto in produzione agenti AI, integrazioni di sistema e automazioni applicate a un negozio vero — PrezziSmart, Mazara del Vallo.
+
+Niente teoria da consulente: solo architetture reali, logistica e software testati sul campo.
 """
 
   [[params.socialIcons]]
