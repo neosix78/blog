@@ -29,7 +29,7 @@ Gli iPhone inoltre hanno una complicazione in più: il fornitore B2B non ti dice
 
 ## Il primo approccio: sincronizzare tutto in automatico
 
-Ho costruito uno script che ogni mattina e ogni pomeriggio:
+Ho progettato e messo in funzione, attraverso lo sviluppo assistito dall'IA, uno script che ogni mattina e ogni pomeriggio:
 
 1. preleva i modelli iPhone dal catalogo del distributore;
 2. confronta i prezzi con quelli della grande distribuzione online;

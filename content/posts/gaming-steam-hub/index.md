@@ -19,13 +19,13 @@ Oggi un post diverso. Non un problema del negozio, nessuna automazione che mi fa
 
 Mi piace sapere a cosa gioco, quanto ci gioco, quando ci gioco. E già che ci sono, mi piace anche sapere se un gioco che mi interessa è sceso di prezzo, e se per caso è già incluso nel Game Pass che pago tutti i mesi.
 
-Ho costruito tutto questo a pezzi, nei ritagli di tempo. Il risultato finale è una webapp che gira sul mio server di casa e che ho aperto solo a me stesso. Ma la storia di come ci sono arrivato è il classico esempio di un'idea piccola che cresce.
+Ho progettato e assemblato tutto questo a pezzi, nei ritagli di tempo, usando assistenti IA per produrre il codice. Il risultato finale è una webapp che gira sul mio server di casa e che ho aperto solo a me stesso. Ma la storia di come ci sono arrivato è il classico esempio di un'idea piccola che cresce.
 
 ## Il contesto
 
 Tutto è iniziato con un'idea singola: voglio una skill che mi dica dove comprare le chiavi dei giochi al prezzo più basso possibile. Stop.
 
-Uso [Claude Code](https://claude.com/product/claude-code) tutti i giorni, e ho iniziato a scrivere skill personali per qualunque cosa ripetessi più di tre volte. La ricerca chiavi era una di quelle: ogni volta che un gioco mi piaceva, finivo a controllare a mano Fanatical, GreenManGaming, Humble, GamesPlanet, Instant Gaming. Una skill che chiamasse [IsThereAnyDeal](https://isthereanydeal.com) mi avrebbe risolto la vita.
+Uso [Claude Code](https://claude.com/product/claude-code) tutti i giorni, e ho iniziato a progettare skill personali per qualunque cosa ripetessi più di tre volte. La ricerca chiavi era una di quelle: ogni volta che un gioco mi piaceva, finivo a controllare a mano Fanatical, GreenManGaming, Humble, GamesPlanet, Instant Gaming. Una skill che chiamasse [IsThereAnyDeal](https://isthereanydeal.com) mi avrebbe risolto la vita.
 
 Detto, fatto. Una skill `steam-keys` che, alla domanda *"miglior prezzo Cyberpunk 2077"*, mi rispondeva con il negozio più conveniente, il prezzo, lo sconto e — bonus — se era un minimo storico oppure no.
 
@@ -45,7 +45,7 @@ Servivano da qualche parte. Possibilmente in una pagina che potessi aprire al vo
 
 ## Cosa ho fatto
 
-Ho tirato su un piccolo Flask sul mio server casalingo, sulla porta 8772. Una pagina sola, niente login (è raggiungibile solo dalla rete locale), refresh automatico a intervalli diversi a seconda di cosa stai guardando.
+Con lo sviluppo assistito dall'IA ho messo in funzione una piccola applicazione Flask sul mio server casalingo, sulla porta 8772. Una pagina sola, niente login (è raggiungibile solo dalla rete locale), refresh automatico a intervalli diversi a seconda di cosa stai guardando.
 
 I dati arrivano da quattro fonti:
 
@@ -88,7 +88,7 @@ Il servizio gira come `systemd --user service`, riparte da solo se crasha. Uso t
 
 ## Cosa ho imparato
 
-**Le passioni si possono coltivare con l'AI tanto quanto il lavoro.** Non è solo per il negozio o per gli script che mi fanno risparmiare tempo. Quando ho un'ora libera la sera, mettere insieme una cosa così con Claude Code è un piacere puro: scrivo l'idea in italiano, lui produce il codice, io lo correggo dove serve. Tre serate per arrivare alla versione che uso ogni giorno.
+**Le passioni si possono coltivare con l'AI tanto quanto il lavoro.** Non è solo per il negozio o per gli script che mi fanno risparmiare tempo. Quando ho un'ora libera la sera, mettere insieme una cosa così con Claude Code è un piacere puro: descrivo l'idea e il comportamento atteso in italiano, lui produce il codice, io provo il risultato e gli segnalo cosa modificare. Tre serate per arrivare alla versione che uso ogni giorno.
 
 **Le idee piccole sono le migliori da cui partire.** Se all'inizio mi fossi messo a progettare *"una dashboard completa per il mio gaming"* probabilmente non l'avrei mai finita. Sono partito da una skill di una funzione (cerca chiavi al prezzo minimo) e ho aggiunto un pezzo per volta solo quando il problema mi si presentava davvero. Ogni pezzo nasce da una frase tipo *"però sarebbe bello se anche..."*.
 
@@ -99,4 +99,4 @@ Il servizio gira come `systemd --user service`, riparte da solo se crasha. Uso t
 - [IsThereAnyDeal API](https://docs.isthereanydeal.com) — il backend dei prezzi delle chiavi
 - [Steam Web API](https://steamcommunity.com/dev) — libreria, ore, recensioni
 - [xbl.io](https://xbl.io) — wrapper API XboxLive (versione free per uso personale)
-- [Claude Code](https://claude.com/product/claude-code) — ne ho già parlato in [un altro post](/posts/cron-sentinel/), per me è diventato il modo standard di scrivere codice
+- [Claude Code](https://claude.com/product/claude-code) — ne ho già parlato in [un altro post](/posts/cron-sentinel/), per me è diventato il modo standard di trasformare un'idea in software funzionante

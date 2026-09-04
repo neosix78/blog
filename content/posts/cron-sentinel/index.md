@@ -2,7 +2,7 @@
 title = "21 cron job al buio (e cosa ho fatto per accendere la luce)"
 date = '2026-04-30T08:00:00+02:00'
 draft = false
-summary = "Ho 21 cron sul mio server. Per mesi non sapevo davvero quali girassero e quali no. Ho scritto un wrapper di 1.500 righe in Python — niente Prometheus, niente agent — e l'ho rilasciato open-source su GitHub."
+summary = "Ho 21 cron sul mio server. Per controllarli ho progettato e messo in funzione, attraverso lo sviluppo assistito dall'IA, un wrapper Python leggero rilasciato open source."
 tags = ["python", "devops", "cron", "open-source", "automazione", "self-hosted"]
 categories = ["tech-tips"]
 
@@ -41,9 +41,11 @@ Per **21 cron** sul mio piccolo server di negozio, è sproporzionato. È più in
 
 Volevo qualcosa di più piccolo. E più consapevole del **contenuto** di un job, non solo del fatto che girasse o meno.
 
-## La cosa che ho scritto
+## La soluzione che ho progettato
 
-L'ho chiamata **cron-sentinel**. Tre pezzi, ~1.500 righe di Python, zero dipendenze (solo libreria standard):
+L'ho chiamata **cron-sentinel**. Ho definito requisiti, regole di comportamento e casi di errore; un assistente IA ha generato e modificato il codice, mentre io ne verificavo il funzionamento sui job reali e facevo correggere i problemi emersi.
+
+La soluzione risultante ha tre pezzi, circa 1.500 righe di Python e zero dipendenze esterne:
 
 - Un **runner** che metti *davanti* a ogni cron: avvolge il comando esistente, calcola un "bucket" temporale (giorno/ora/settimana), controlla se quella stessa identità è già andata a buon fine, e altrimenti esegue. Cattura stdout, stderr, exit code, durata in un envelope strutturato.
 - Un **database SQLite** (un singolo file) che traccia ogni esecuzione: status, error_code, retryable o no, JSON completo dell'envelope per il debug.
@@ -86,7 +88,7 @@ Non è osservabilità di livello enterprise. È il livello giusto **per la mia i
 
 ## Perché lo metto online
 
-Mi serviva. L'ho costruito per me. Ma il pattern — wrapper sottile, envelope strutturato, digest che cerca pattern invece di metriche — è abbastanza generico che potrebbe servire a chiunque gestisca una manciata di cron senza voler tirare in casa un osservatorio.
+Mi serviva e l'ho progettato per risolvere un problema concreto. Ma il pattern — wrapper sottile, envelope strutturato, digest che cerca pattern invece di metriche — è abbastanza generico che potrebbe servire a chiunque gestisca una manciata di cron senza voler tirare in casa un osservatorio.
 
 L'ho rilasciato MIT su GitHub: **[github.com/neosix78/cron-sentinel](https://github.com/neosix78/cron-sentinel)**.
 

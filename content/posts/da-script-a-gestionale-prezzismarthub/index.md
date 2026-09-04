@@ -2,7 +2,7 @@
 title = "Da uno script per le spedizioni al cuore del negozio: storia del mio gestionale su misura"
 date = '2026-08-20T11:00:00+02:00'
 draft = false
-summary = "Da 50 righe di Python a un gestionale su misura: come PrezziSmartHub collega contabilità, logistica, magazzino e automazioni del negozio."
+summary = "Da una piccola automazione a un gestionale su misura: come ho trasformato esigenze reali del negozio in PrezziSmartHub attraverso lo sviluppo assistito dall'IA."
 tags = ["self-hosting", "python", "flask", "docker", "danea", "automazione", "gestionale-su-misura", "piccole-imprese", "prezzismart", "retail-tech"]
 categories = ["tech-tips"]
 
@@ -27,13 +27,13 @@ Un giorno mi sono detto: *basta, questo tempo devo riprendermelo*. 🛑
 
 PrezziSmartHub non è nato da un piano industriale disegnato a tavolino da consulenti in giacca e cravatta. È nato da un fastidio pratico, minuscolo: **non volevo più perdere un quarto d'ora per compilare tre etichette di spedizione.**
 
-Ho aperto un file vuoto e ho scritto poche righe di codice in Python per prendere i dati di un cliente, formattarli e creare il file pronto per le Poste. Funzionava alla grande. Era grezzo, graficamente spartano, ma faceva risparmiare minuti preziosi ogni singolo giorno. ⏱️
+Ho descritto a un assistente IA il flusso che mi serviva e, attraverso più tentativi, abbiamo generato un piccolo script Python capace di prendere i dati di un cliente, formattarli e creare il file pronto per le Poste. Io definivo il comportamento, provavo il risultato al banco e facevo correggere ciò che non funzionava. Era grezzo, graficamente spartano, ma faceva risparmiare minuti preziosi ogni singolo giorno. ⏱️
 
 Solo che l'appetito vien mangiando. Quando vedi che il computer può toglierti di dosso una fatica ripetitiva, ti viene naturale chiederti: *cos’altro posso fargli fare?* 🤔
 
 ---
 
-## La valanga: quando il codice incontra la realtà del bancone 🏪⚡
+## La valanga: quando lo sviluppo assistito incontra la realtà del bancone 🏪⚡
 
 Da quel piccolo script è partita una reazione a catena inarrestabile:
 
@@ -72,8 +72,8 @@ PrezziSmartHub è un **cantiere perennemente aperto**.
 
 Dietro la grafica pulita ci sono sfide tecniche continue: database da sincronizzare in sicurezza, container Docker da aggiornare, monitoraggio dei job in background (un po' come ho fatto per [i 21 cron job del server](/posts/cron-sentinel/)) e nuovi collegamenti all'intelligenza artificiale per automatizzare schede prodotto e risposte. 🤖
 
-A volte qualcosa si inceppa, apro i log, capisco dove sta il problema e lo sistemo. Ma la soddisfazione di vedere l'intero ecosistema del negozio muoversi in perfetta armonia — dal banco al magazzino, dal web alle banche — non ha prezzo. 📈
+A volte qualcosa si inceppa: raccolgo sintomi e log, faccio analizzare il problema all'assistente IA, verifico la correzione e ripeto il ciclo finché il flusso torna affidabile. Ma la soddisfazione di vedere l'intero ecosistema del negozio muoversi in perfetta armonia — dal banco al magazzino, dal web alle banche — non ha prezzo. 📈
 
-Non sono un programmatore teorico chiuso in una torre d'avorio: sono un negoziante appassionato di tecnologia che ha deciso di usarla come leva per lavorare con più serenità, zero sprechi di tempo e una visione nitida del futuro della propria azienda. 🚀
+Non sono un programmatore tradizionale e non revisiono il codice riga per riga. Sono un negoziante appassionato di tecnologia che trasforma problemi reali in requisiti, guida lo sviluppo con l'IA, collauda ogni passaggio e porta le soluzioni nel lavoro quotidiano. 🚀
 
 E questo cantiere ha ancora tantissime novità pronte a vedere la luce! 🌟

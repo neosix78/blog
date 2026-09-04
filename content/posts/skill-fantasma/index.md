@@ -13,7 +13,7 @@ categories = ["tech-tips"]
   relative = true
 +++
 
-Uso Claude Code ogni giorno. È il mio terminale "smart": gli chiedo di cercare un prezzo da un fornitore, di lanciare un report, di scrivere un piccolo script, e lui esegue. Per farlo ho creato nel tempo una sessantina di **skill** — istruzioni ricamate su misura per ognuno dei miei workflow ricorrenti.
+Uso Claude Code ogni giorno. È il mio terminale "smart": gli chiedo di cercare un prezzo da un fornitore, di lanciare un report, di scrivere un piccolo script, e lui esegue. Per farlo ho progettato e fatto evolvere con l'IA una sessantina di **skill** — istruzioni ricamate su misura per ognuno dei miei workflow ricorrenti.
 
 A un certo punto mi sono accorto che qualcosa non tornava.
 

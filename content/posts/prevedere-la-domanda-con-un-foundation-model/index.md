@@ -75,7 +75,7 @@ Capito questo, ho smesso di forzare lo strumento dentro il problema sbagliato. I
 
 Ecco la parte concreta, quella che è finita in produzione e che gira da sola.
 
-Ho costruito due report automatici che si generano senza che io faccia nulla:
+Ho progettato e messo in funzione, attraverso lo sviluppo assistito dall'IA, due report automatici che si generano senza che io faccia nulla:
 
 1. **Un report settimanale**, ogni lunedì mattina. Per le categorie ad alta rotazione mi dice la domanda attesa della settimana, con un secondo numero accanto — lo **scenario prudente** — che risponde alla domanda "e se va forte?". Per i servizi a ritmo settimanale netto mi dà anche la distribuzione per giorno, utile per organizzare il lavoro e i ritiri.
 
