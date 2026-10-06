@@ -1,10 +1,10 @@
 +++
-title = "PrezziSmartHub, il gestionale nato dentro al negozio"
+title = "PrezziSmart Hub: doveva essere un Excel, ma quell'Excel è durato veramente poco"
 date = '2026-10-06T10:00:00+02:00'
 draft = false
 slug = "prezzismarthub-gestionale-nato-dentro-negozio"
-summary = "PrezziSmartHub è nato da una spedizione e oggi tiene insieme contabilità, magazzino, e-commerce, fornitori e vendite: il negozio visto dai suoi dati."
-description = "Il racconto di come PrezziSmartHub unisce spedizioni, Danea, e-commerce, contabilità, fornitori e analisi vendite dentro il negozio."
+summary = "Partito da un Excel per le spedizioni, PrezziSmart Hub è diventato un gestionale che mi aiuta a vedere il negozio e decidere meglio."
+description = "Da un Excel a PrezziSmart Hub: spedizioni, Danea, e-commerce, entrate e uscite, magazzino e fornitori per capire il negozio e decidere meglio."
 tags = ["prezzismart", "prezzismarthub", "gestionale", "retail-tech", "danea", "woocommerce", "spedizioni", "contabilita", "magazzino", "automazione", "ai"]
 categories = ["tech-tips"]
 
@@ -15,72 +15,64 @@ categories = ["tech-tips"]
   relative = true
 +++
 
-Ogni tanto qualcuno mi chiede che cos'è davvero PrezziSmartHub, e la risposta facile sarebbe dire che è il mio gestionale interno, una web app in Flask, un pannello con dentro spedizioni, contabilità, Danea, e-commerce, fornitori, clienti, statistiche e tutte quelle parole belle che sembrano fare subito ordine. Però sarebbe una risposta troppo pulita, e soprattutto sarebbe una risposta falsa, perché l'Hub non è nato come nascono i software nei racconti ordinati, quelli in cui prima fai l'analisi, poi il progetto, poi lo sviluppo, poi il rilascio.
+Quando ho iniziato a lavorare a quello che oggi chiamo PrezziSmart Hub, l'idea era decisamente più semplice di quello che poi è diventato il progetto. Tutto nasceva da un'esigenza molto concreta: eliminare una serie di operazioni ripetitive che facevo quotidianamente in negozio e che, in qualche modo, ruotavano intorno a dei file Excel.
 
-PrezziSmartHub è nato al contrario: è nato perché in negozio c'era una cosa che mi faceva perdere tempo, poi un'altra che mi faceva perdere lucidità, poi un'altra ancora che mi faceva prendere decisioni guardando solo un pezzo del quadro, e a un certo punto mi sono accorto che non stavo costruendo un programma, stavo costruendo un modo per non farmi schiacciare dalla quantità di micro-decisioni che ogni giorno passano sopra al banco senza fare rumore.
+A pensarci oggi, però, quell'Excel è durato veramente poco. Quando apro PrezziSmart Hub ormai non vedo più nemmeno lontanamente il foglio di calcolo da cui ero partito, ma qualcosa di completamente diverso e, soprattutto, molto più grande di quello che avevo immaginato.
 
-La prima versione, quella più grezza, [l'ho già raccontata](/posts/da-script-a-gestionale-prezzismarthub/): tutto era partito dalle spedizioni, da quei minuti buttati a ricopiare nomi, indirizzi, telefoni, pesi, misure, date di ritiro, costi e codici dentro portali che non si parlavano tra loro. Sembrava un problema piccolo, quasi noioso da raccontare, ma chi lavora in negozio lo sa: quando una cosa piccola si ripete tutti i giorni, diventa struttura, e quando una struttura è storta ti mangia attenzione anche se sulla carta ti porta via solo cinque minuti.
+Credo che il momento preciso in cui me ne sono reso conto sia stato lavorando sulle spedizioni. All'inizio l'Hub preparava automaticamente l'Excel che prima compilavo a mano: io dovevo semplicemente caricarlo e avevo già risparmiato parecchio tempo. Era utile, certo, ma alla fine continuavo a fare lo stesso lavoro di prima, semplicemente in maniera più veloce.
 
-Oggi le spedizioni dentro l'Hub non sono più soltanto un modo per generare un file o stampare una lettera di vettura. Sono diventate un flusso intero, con i servizi di spedizione e i corrieri, preventivi, storico, tracking, messaggi ai clienti, report, prezzi cliente, costi reali quando disponibili, fasce Danea, vendite collegate e perfino il pezzo fiscale che va trattato con i piedi di piombo, perché tra un bottone comodo e una scrittura sbagliata passa una linea sottile che non voglio attraversare per fretta. Il punto, però, non è dire "guarda quante integrazioni". Il punto è che adesso una spedizione non è più un evento isolato: è un pezzo di lavoro che nasce dal banco, passa dal cliente, tocca la contabilità, può diventare vendita, può generare un messaggio, può finire in un report, e soprattutto resta dentro una storia leggibile.
+Le cose sono cambiate quando ho iniziato a integrare direttamente API, fornitori e servizi esterni, fino ad automatizzare non più la preparazione di un file, ma praticamente l'intero flusso della spedizione, comprese operazioni successive e comunicazioni con il cliente. È stato allora che ho capito che non stavo più costruendo un modo più sofisticato per creare un Excel, ma qualcosa di completamente diverso.
 
-Questa è la differenza enorme tra un gestionale comprato e un gestionale cucito addosso: il primo ti chiede di adattarti al suo modo di ragionare, il secondo può crescere esattamente nel punto in cui il tuo lavoro ti fa attrito.
+## La parte che avevo sottovalutato
 
-## Danea non è il nemico, è il vecchio centro di gravità
+Quello che invece avevo decisamente sottovalutato è quanto possa essere complicato sviluppare un gestionale, anche quando il gestionale deve servire praticamente una sola azienda: la mia.
 
-Per anni Danea è stato il centro di gravità del negozio, e sarebbe stupido raccontarlo come se fosse soltanto un ostacolo. Dentro Danea ci sono prodotti, clienti, documenti, costi, storico, abitudini, codici che uso da anni, e soprattutto c'è una parte di realtà che non si può riscrivere con leggerezza solo perché oggi ho un'interfaccia più moderna. Quando leggo certi racconti di trasformazione digitale mi sembra sempre che il software nuovo debba arrivare con la ruspa, buttare giù tutto e ricominciare. Nella vita vera di una piccola attività non funziona così, o almeno io non voglio che funzioni così.
+All'inizio il ragionamento era abbastanza semplice: non devo creare SAP, non mi servono millemila funzioni, implemento quelle che utilizzo io e buonanotte. Il problema è che una funzione apparentemente semplice, quando inizi a utilizzarla veramente, ne porta dietro quasi sempre altre.
 
-L'Hub, in questa fase, fa una cosa più delicata: legge, collega, traduce, confronta, mette in sicurezza, e solo dove ha senso costruisce un'alternativa. Danea continua a essere la fonte ufficiale per molte cose, mentre PrezziSmartHub ci gira attorno come una cabina di regia che prende quei dati e li rende utilizzabili nel lavoro di ogni giorno. Il catalogo del sito WooCommerce, per esempio, non nasce da un caricamento manuale fatto una volta e poi dimenticato: viene alimentato dal mondo Danea, con prezzi, stock, EAN, categorie, foto, regole di arrotondamento, sincronizzazioni e controlli. L'e-commerce, a sua volta, non è un'isola appesa su Aruba: è collegato al negozio, alle spedizioni, agli ordini, alle descrizioni prodotto, al modo in cui decidiamo cosa mostrare e cosa tenere aggiornato.
+Implementi qualcosa, la provi, trovi un caso che non avevi previsto, fai debug e lo sistemi; poi la utilizzi realmente in negozio e ti accorgi che manca una funzione che davi quasi per scontata, la aggiungi e scopri che deve comunicare con un'altra parte del sistema. Nel frattempo ti viene in mente un modo migliore di fare la stessa cosa e il traguardo, che pensavi fosse ormai vicino, si sposta nuovamente.
 
-Questa è una delle parti meno visibili ma più importanti. Il cliente vede un prodotto online, un prezzo, una pagina spedizioni, un modulo, magari un volantino o una categoria ordinata meglio. Dietro, però, c'è il problema vero: se il sito dice una cosa, il banco ne sa un'altra e Danea ne conserva una terza, prima o poi qualcuno paga quell'incoerenza. Di solito la pago io, con tempo, telefonate, correzioni, dubbi e quella sensazione bruttissima di non sapere quale schermata sia quella vera.
+Probabilmente è questa la parte più frustrante dell'intero progetto, anche perché ho fretta di utilizzarlo e continuo ad avere la sensazione che manchi sempre qualcosa. Ma è contemporaneamente anche una delle parti più interessanti, perché molte delle funzioni migliori non sono nate mentre pensavo a cosa sviluppare, ma mentre utilizzavo davvero quello che avevo sviluppato.
 
-PrezziSmartHub serve anche a questo: a far sì che il negozio abbia meno verità sparse.
+E le dimensioni che ha raggiunto il progetto spiegano abbastanza bene quanto abbia sbagliato le previsioni iniziali: oggi parliamo di circa 137.500 righe tra Python, JavaScript, HTML, CSS e script, con 243 revisioni Git tra il 9 giugno e il 5 ottobre 2026. Numeri abbastanza ridicoli, se penso che tutto era partito dall'idea di rendere più veloce un Excel.
 
-## La contabilità, cioè la parte in cui il negozio smette di raccontarsela
+## Le cose che mi danno più soddisfazione
 
-La contabilità è il punto in cui il romanticismo della tecnologia finisce abbastanza in fretta. Puoi avere il sito bello, la grafica sistemata, il gestionale su misura e tutte le automazioni del mondo, ma se a fine giornata non sai leggere con chiarezza cosa è entrato, cosa è uscito, cosa è incassato davvero e cosa invece è solo movimento apparente, stai guidando con il vetro appannato.
+Le spedizioni rimangono probabilmente la parte alla quale sono più affezionato, anche perché sono state tra le prime funzioni sviluppate e oggi rappresentano uno dei flussi più collaudati. Ormai il lavoro riguarda spesso modifiche che potrei definire “di fino”, salvo poi rendermi conto che, quando una determinata operazione viene ripetuta continuamente, anche risparmiare pochi passaggi diventa tutt'altro che superfluo.
 
-Per anni ho avuto un foglio Excel enorme, cresciuto dal 2017 in poi, con le sue regole, le sue colonne, le sue eccezioni, i suoi mesi importati a mano, i suoi adattamenti successivi. Non lo rinnego, perché mi ha tenuto in piedi, ma a un certo punto il foglio non bastava più. Avevo bisogno che il registro del giorno parlasse con la chiusura fiscale, con le fatture, con i movimenti di cassa, con Sella, Fineco, i finanziamenti, le spese del negozio, le spese personali da separare, le scadenze, i pagamenti fornitori e quei pacchi che sembrano sempre marginali finché non devi capire quanto ti sono costati davvero.
+Un'altra soddisfazione enorme è stata l'integrazione tra Danea e l'e-commerce. Danea è il gestionale che utilizzo da anni ed è un sistema piuttosto chiuso, quindi arrivare al punto di inserire o modificare un articolo e, con un click, ritrovarmelo correttamente sul sito mi ha dato parecchia soddisfazione, soprattutto perché so cosa c'è dietro quel singolo click.
 
-Dentro l'Hub la contabilità non è stata pensata come un modulo da commercialista, ma come il cruscotto mentale di chi la sera deve capire se la giornata ha senso. Entrate, uscite, incassi, contanti, POS, bonifici, finanziamenti, scadenze ricorrenti, pagamenti già saldati in Danea, export fiscale, saldi di cassa e banca: tutto questo non mi interessa perché voglio guardare numeri per passione, mi interessa perché il numero giusto al momento giusto cambia la decisione del giorno dopo. Se vedo solo il fatturato, posso illudermi; se vedo solo le uscite, posso deprimermi; se vedo incassi, fiscalità, scadenze, netto e andamento nello stesso posto, inizio almeno a ragionare.
+Ed è proprio in momenti come questi che sparisce velocemente quel pensiero che, ogni tanto, inevitabilmente arriva: ma non mi conveniva continuare a pagare il canone di Danea e buonanotte?
 
-E ragionare, per una piccola attività, non è un vezzo. È una forma di sopravvivenza.
+La risposta più razionale forse sarebbe: sicuramente avresti lavorato molto meno. Il problema è che poi apro PrezziSmart Hub, vedo quello che riesce già a fare e quel pensiero mi dura più o meno due secondi.
 
-## Vendite, magazzino immobile e quella domanda che fa male
+## Il vero salto: vedere quello che prima non vedevo
 
-Il tema delle vendite è più sporco di come lo raccontano i dashboard belli. Non basta sapere quanto hai venduto, perché due mesi con lo stesso fatturato possono essere due mesi completamente diversi: uno magari è fatto di prodotti con margine buono, accessori, servizi, rotazione sana e cassa che respira; l'altro può essere pieno di vendite grandi che muovono volume ma lasciano poco, oppure di merce che esce tardi, dopo essere stata ferma mesi, già pagata, già invecchiata, già diventata peso psicologico oltre che economico.
+Con il tempo, però, mi sono accorto che la parte più interessante del progetto non è più soltanto l'automazione. PrezziSmart Hub sta iniziando soprattutto ad aiutarmi a capire meglio la mia stessa attività.
 
-Il magazzino immobile è una delle cose più difficili da guardare con onestà, perché sulla carta sembra valore: scaffali pieni, prodotti presenti, roba comprata, merce fisica. Ma se quella merce non gira, se non porta clienti, se occupa spazio e attenzione, se mi fa sentire più tranquillo solo perché posso vederla lì, allora non è ricchezza, è cassa congelata. E in un negozio piccolo la cassa congelata non è un concetto astratto: è un pagamento fornitore che arriva, una promo che non puoi fare, un prodotto nuovo che non compri perché hai ancora il vecchio che ti guarda dallo scaffale.
+Questo ormai riguarda anche la parte economica: utilizzo l'Hub per registrare entrate, uscite e incassi, quindi non sto più guardando soltanto cosa vendo e cosa ho in magazzino, ma riesco ad avere nello stesso sistema una visione molto più completa di quello che succede realmente nel negozio.
 
-Per questo l'Hub sta andando sempre più verso un'analisi delle vendite che non si fermi al totale del mese. Mi serve capire cosa si muove, cosa resta fermo, cosa porta margine, quali categorie hanno senso, quali prodotti hanno bisogno di essere spinti, liquidati, accoppiati a un servizio o semplicemente smessi di comprare. Mi serve collegare lo storico Danea, il gestionale nuovo, le vendite al banco, i resi, il magazzino pilot, i documenti e la marginalità in un modo che non cancelli il passato ma non mi costringa nemmeno a vivere per sempre dentro i limiti del passato.
+Danea mi ha sempre dato una quantità enorme di numeri e informazioni, quindi il problema non era l'assenza dei dati, ma il modo in cui riuscivo a vederli. In un certo senso erano informazioni contemporaneamente visibili e invisibili: esistevano, ma non erano presentate nella maniera che serviva a me per prendere determinate decisioni.
 
-Anche qui, il punto non è fare il gestionale perfetto. Il punto è smettere di lavorare a sensazione quando i dati, se messi in fila, possono dirmi una verità più utile della mia memoria.
+Oggi riesco quindi ad avere una visione molto più chiara delle vendite, degli incassi e delle spese, a ragionare meglio su cosa comprare e in quali quantità e, soprattutto, riesco a vedere con molta più immediatezza il magazzino immobile, cioè quei prodotti che stanno semplicemente tenendo fermi dei soldi sugli scaffali.
 
-## Fornitori e competitor: non per fare la guerra dei prezzi, ma per non combattere bendati
+Lo stesso discorso vale quando un cliente mi chiede qualcosa che non ho. Prima dovevo districarmi tra diversi fornitori, cercare il prodotto, confrontare disponibilità e costi e successivamente capire a quale prezzo lo stesse vendendo il mercato. Adesso ho integrato un sistema che mi permette di cercare quasi istantaneamente lo stesso articolo presso diversi fornitori e contemporaneamente avere una panoramica dei prezzi dei competitor.
 
-Una delle funzioni più recenti e più concrete dell'Hub è la ricerca fornitori. Dal banco posso cercare un prodotto e interrogare più sorgenti B2B insieme, con prezzi netti, disponibilità, link, IVA, trasporti dove noti e regole specifiche per fornitori diversi. Non è una magia: è un modo per non aprire otto portali, fare otto login, cercare otto volte la stessa cosa e poi provare a ricordarmi quale prezzo era netto, quale era lordo, quale includeva trasporto e quale invece sembrava conveniente solo perché mancava un pezzo.
+Questo non significa necessariamente essere sempre quello che costa meno, cosa che oltretutto non avrebbe senso, ma sapere immediatamente se posso essere più economico, se posso allinearmi al mercato oppure se a quelle condizioni semplicemente non mi conviene acquistare quell'articolo.
 
-Accanto ai fornitori c'è la ricerca competitor, con il confronto tra marketplace e catene di distribuzione per capire dove si trova il mercato in quel momento. Anche qui bisogna stare attenti alla tentazione più pericolosa: se guardi i competitor solo per inseguire il prezzo più basso, hai già perso. PrezziSmart non può vivere facendo la guerra dei volumi a chi compra con scale completamente diverse. Però non posso nemmeno ignorare il prezzo, perché il cliente lo vede, lo confronta, arriva al banco già con uno screenshot in mano e si aspetta che io sappia di cosa stiamo parlando.
+## Dal fare più velocemente al decidere meglio
 
-Quindi l'Hub mi serve per una cosa più matura: sapere quando posso essere competitivo, quando devo spiegare il valore del servizio, quando ha senso ordinare da un fornitore invece che da un altro, quando un prodotto è da evitare perché il margine non regge, e quando invece posso usare il prezzo come esca intelligente senza trasformare tutto il negozio in una corsa al ribasso.
+Quest'ultimo aspetto è probabilmente quello che oggi trovo più interessante, perché PrezziSmart Hub sta iniziando anche ad aiutarmi a capire se abbia senso oppure no effettuare determinati acquisti.
 
-La differenza è sottile ma decisiva. Non voglio un software che mi dica solo "costa meno lì". Voglio un sistema che mi aiuti a capire se quella vendita, per il negozio, ha senso.
+Parte di questa evoluzione è arrivata anche da un progetto parallelo, Crescita, una serie di libri e podcast che ho creato per approfondire economia, commercio, gestione del magazzino e altri argomenti utili alla mia attività. Diverse cose che ho imparato attraverso quel percorso sono finite nel mio modo di lavorare e alcune sono state trasformate direttamente in funzioni dell'Hub; altre so già che lo saranno in futuro.
 
-## Il collegamento con Crescita
+Se dovessi quindi riassumere l'evoluzione del progetto, direi che sono passato dal voler automatizzare, al voler vedere, fino al voler decidere meglio.
 
-Il progetto Crescita è nato da una frase molto meno tecnica e molto più personale: a fine mese mi sentivo spesso deluso, come se stessi lavorando tanto senza riuscire mai a vedere chiaramente il progresso. Poi, quando abbiamo iniziato a mettere i numeri in fila, è venuto fuori che la sensazione non raccontava tutta la storia: c'erano stagionalità fortissime, mesi fisiologicamente più deboli, confronti anno su anno più interessanti di quanto sembrassero a pelle, e soprattutto mancava il dato più importante, cioè il margine reale rispetto ai costi fissi.
+Non voglio ovviamente che un software decida al posto mio come gestire il negozio, ma voglio che, quando devo prendere una decisione, riesca a mettermi davanti tutte le informazioni che mi servono nella maniera più chiara possibile.
 
-Questa cosa per me è stata uno spartiacque. Perché finché guardi il mese come un voto morale, ogni calo sembra una bocciatura e ogni salita sembra una tregua. Quando invece lo guardi come un sistema, inizi a chiederti domande migliori: che scontrino medio ho avuto, quanti clienti sono entrati, quali prodotti hanno mosso margine, quali spese mi hanno assorbito, quanto devo fare per coprire la base, quali leve posso usare senza bruciarmi, dove devo smettere di buttare energia.
+Forse è proprio questo il motivo per cui devo rassegnarmi al fatto che PrezziSmart Hub non sarà mai veramente “finito”. Posso arrivare ad avere tutte le funzioni che oggi considero necessarie, ma continuerò a lavorare, a scoprire problemi, a imparare cose nuove e inevitabilmente a pensare: questa cosa potrei farla fare all'Hub.
 
-PrezziSmartHub è il braccio operativo di quel progetto. Crescita è la domanda, l'Hub è il posto in cui provo a costruire le risposte. Non risposte motivazionali, non "bisogna crederci", non il post LinkedIn con la foto del caffè e la frase sul mindset. Risposte fatte di dati, scadenze, vendite, incassi, magazzino, fornitori, competitor, sito, spedizioni, clienti, recensioni, servizi, stagionalità e piccoli strumenti che, messi insieme, possono cambiare il modo in cui decido.
+È frustrante? A volte parecchio. Ho sottovalutato enormemente la quantità di lavoro necessaria? Assolutamente sì.
 
-Forse questa è la parte che mi interessa di più: non sto costruendo PrezziSmartHub perché sogno di diventare una software house. Lo sto costruendo perché il negozio è una macchina complessa, e per anni ho provato a tenerla in equilibrio con attenzione, memoria, fogli, abitudini e forza bruta. A un certo punto la forza bruta non basta più, o comunque costa troppo. Serve un sistema che osserva con me, che mi ricorda le cose, che collega i pezzi, che non mi lascia solo davanti alla sensazione del momento.
+Ma quando penso da dove sono partito e guardo quello che ho davanti oggi, continuo a pensare che ne sia valsa la pena.
 
-## Il gestionale perfetto non esiste, però esiste quello che cresce con te
-
-Se oggi dovessi vendere PrezziSmartHub come prodotto, probabilmente sbaglierei tutto, perché lo riempirei di schermate e moduli e parole tecniche. In realtà la sua qualità più importante è molto meno appariscente: è nato dentro al negozio, mentre il negozio lavorava, e ogni pezzo è stato aggiunto perché c'era un problema reale che tornava a bussare.
-
-Questo lo rende imperfetto, inevitabilmente. Ci sono parti mature e parti in test, moduli che leggono soltanto e altri che scrivono, zone dove Danea resta il padrone e zone dove il gestionale nuovo inizia a respirare da solo, flussi già quotidiani e flussi ancora da trattare con guanti spessi. Ma preferisco questa imperfezione viva a un software perfettamente ordinato che mi costringe a tradurre il mio lavoro nel linguaggio di qualcun altro.
-
-PrezziSmartHub, per come lo vedo oggi, è questo: non un pannello di controllo per sentirmi moderno, ma un tentativo molto concreto di trasformare il caos quotidiano di una piccola attività in informazioni utilizzabili. È il punto in cui spedizioni, contabilità, e-commerce, Danea, magazzino, fornitori, competitor e crescita smettono di essere reparti separati nella mia testa e diventano una sola conversazione.
-
-E forse il vero salto è proprio qui: quando il negozio smette di essere una somma di urgenze e comincia, finalmente, a parlare una lingua che riesco a leggere.
+Doveva essere un'evoluzione di un Excel. Il problema, o forse la cosa più bella, è che quell'Excel è durato veramente poco.
