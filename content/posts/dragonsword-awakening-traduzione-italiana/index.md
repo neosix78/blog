@@ -37,9 +37,9 @@ Il risultato ha i limiti di una prima versione. Qualche frase può suonare rigid
 
 ## La traduzione è disponibile
 
-Potete scaricare la traduzione italiana di DragonSword : Awakening qui: **[SCARICA LA TRADUZIONE — LINK DA INSERIRE]**.
+Potete scaricare la traduzione italiana di DragonSword : Awakening qui: **[SCARICA LA TRADUZIONE ITALIANA (ZIP, 17 MB)](pakchunk999-WindowsClient_P.zip)**.
 
-È un progetto amatoriale non ufficiale, realizzato con AI e ancora aperto alla revisione linguistica. Traduce i testi, senza aggiungere un doppiaggio italiano, e richiede il gioco. Per installarlo basta copiare, a gioco chiuso, `pakchunk999-WindowsClient_P.pak` nella cartella `DS\Content\Paks\~mods\`, creando quest’ultima se manca. Rimuovendo il file si torna alla situazione originale. Eventuali aggiornamenti del gioco potrebbero richiedere un pacchetto aggiornato.
+È un progetto amatoriale non ufficiale, realizzato con AI e ancora aperto alla revisione linguistica. Traduce i testi, senza aggiungere un doppiaggio italiano, e richiede il gioco. Per installarla, estrai lo ZIP e copia, a gioco chiuso, `pakchunk999-WindowsClient_P.pak` nella cartella `DS\Content\Paks\~mods\`, creando quest’ultima se manca. Rimuovendo il file si torna alla situazione originale. Eventuali aggiornamenti del gioco potrebbero richiedere un pacchetto aggiornato.
 
 ## E adesso la domanda alle aziende
 
